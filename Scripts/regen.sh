@@ -4,7 +4,7 @@
 #Ce script permet de régénérer la page WEB du site de supervision à partir des fichiers .csv, toutes les 5 minutes et envoie des alertes par email en cas de problème.
 #Nom du script : regen.sh
 #Ce script est stocké sur le serveur HTTP dans le répertoire /bin (ne pas oublier de lui attribuer ses droits pour qu'il puisse s'exécuter).
-#Ne pas oublier d'automatiser le script, utiliser "crontab -e" et ajouter : */5 * * * * /bin/log_dns.sh
+#Ne pas oublier d'automatiser le script, utiliser "crontab -e" et ajouter : */5 * * * * /bin/regen.sh
 #Ne pas oublier d'instaler : apt-get install mailutils / apt-get install mutt
 
 
@@ -31,7 +31,7 @@ fi
 echo "<html>
   <head>
     <meta charset=utf-8>
-    <title>Adresses clients</title>  
+    <title>Supervision</title>  
   </head>
   <body>
     <h1>Nombre de clients s'étant connectés durant la dernière heure : $NB_IP<br/>$IPs</h1>
