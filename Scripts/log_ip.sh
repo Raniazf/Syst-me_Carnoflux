@@ -31,5 +31,5 @@ do
 done
 
 
-cat log_ip_tempo.tmp | uniq >> /home/gonfreecs/Bureau/Admin/log_ip/log_ip.csv  #On stocke le tout dans un fichier .csv
+sort log_ip_tempo.tmp | uniq >> /home/gonfreecs/Bureau/Admin/log_ip/log_ip.csv  #On stocke le tout dans un fichier .csv
 rm log_ip_tempo.tmp 2>/dev/null  #On supprime le fichier temporaire
